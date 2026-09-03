@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Samuel Nitan D. Gonzales | Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Times New Roman", Times, serif;
+            background: url("bgnitz.png") left top / cover fixed no-repeat;
+            color: #1f2937;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 18px 8%;
+            background: rgba(255, 255, 255, 0.88);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(31, 41, 55, 0.15);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 27px;
+            font-weight: bold;
+            color: #18212f;
+        }
+
+        .logo span {
+            color: #5b4fcf;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #374151;
+            font-size: 17px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #5b4fcf;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 110px 20px 60px;
+            background: rgba(255, 255, 255, 0.18);
+        }
+
+        .hero-content {
+            max-width: 900px;
+            background: rgba(255, 255, 255, 0.68);
+            padding: 45px 35px;
+            border-radius: 24px;
+            border: 1px solid rgba(31, 41, 55, 0.14);
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.10);
+            backdrop-filter: blur(5px);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 8px 16px;
+            border: 1px solid rgba(91, 79, 207, 0.45);
+            border-radius: 30px;
+            color: #4c43b5;
+            background: rgba(91, 79, 207, 0.08);
+            margin-bottom: 20px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .hero h1 {
+            font-size: clamp(45px, 8vw, 80px);
+            line-height: 1.05;
+            margin-bottom: 20px;
+            color: #111827;
+        }
+
+        .hero h1 span {
+            color: #5b4fcf;
+        }
+
+        .hero h2 {
+            font-size: 24px;
+            color: #374151;
+            margin-bottom: 20px;
+            font-weight: normal;
+        }
+
+        .hero p {
+            color: #4b5563;
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        /* =========================
+           BUTTONS
+        ========================= */
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 13px 23px;
+            border-radius: 10px;
+            border: 1px solid #5b4fcf;
+            transition: 0.3s;
+            font-weight: bold;
+        }
+
+        .btn-primary {
+            background: #5b4fcf;
+            color: #ffffff;
+            box-shadow: 0 5px 15px rgba(91, 79, 207, 0.25);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.65);
+            color: #3f3a91;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            opacity: 0.88;
+        }
+
+        /* =========================
+           SECTIONS
+        ========================= */
+
+        section {
+            padding: 90px 8%;
+            background: rgba(255, 255, 255, 0.45);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 40px;
+            margin-bottom: 10px;
+            color: #111827;
+        }
+
+        .section-title p {
+            color: #4b5563;
+        }
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 50px;
+            align-items: start;
+        }
+
+        .about-text h3 {
+            font-size: 30px;
+            margin-bottom: 15px;
+            color: #18212f;
+        }
+
+        .about-text p {
+            color: #4b5563;
+            margin-bottom: 15px;
+        }
+
+        /* =========================
+           INFO BOX
+        ========================= */
+
+        .info-box {
+            background: rgba(255, 255, 255, 0.78);
+            border: 1px solid rgba(31, 41, 55, 0.14);
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        .info-box p {
+            margin-bottom: 10px;
+            color: #4b5563;
+        }
+
+        .info-box strong {
+            color: #18212f;
+        }
+
+        /* =========================
+           SKILLS
+        ========================= */
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 25px;
+        }
+
+        .skill {
+            padding: 9px 15px;
+            background: rgba(255, 255, 255, 0.78);
+            border: 1px solid rgba(91, 79, 207, 0.25);
+            border-radius: 8px;
+            color: #374151;
+            transition: 0.3s;
+        }
+
+        .skill:hover {
+            transform: translateY(-2px);
+            border-color: #5b4fcf;
+            color: #4c43b5;
+        }
+
+        /* =========================
+           EXPERIENCE
+        ========================= */
+
+        .experience {
+            display: grid;
+            gap: 25px;
+        }
+
+        .experience-card {
+            background: rgba(255, 255, 255, 0.80);
+            border: 1px solid rgba(31, 41, 55, 0.14);
+            padding: 30px;
+            border-radius: 15px;
+            transition: 0.3s;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+        }
+
+        .experience-card:hover {
+            transform: translateY(-5px);
+            border-color: #5b4fcf;
+            box-shadow: 0 12px 30px rgba(91, 79, 207, 0.12);
+        }
+
+        .experience-card h3 {
+            font-size: 23px;
+            margin-bottom: 5px;
+            color: #18212f;
+        }
+
+        .experience-card .company {
+            color: #5b4fcf;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .experience-card p {
+            color: #4b5563;
+        }
+
+        .experience-card ul {
+            margin-left: 20px;
+            color: #4b5563;
+        }
+
+        .experience-card li {
+            margin-bottom: 8px;
+        }
+
+        /* =========================
+           EDUCATION
+        ========================= */
+
+        .education {
+            display: grid;
+            gap: 20px;
+        }
+
+        .education-card {
+            background: rgba(255, 255, 255, 0.80);
+            border: 1px solid rgba(31, 41, 55, 0.14);
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+        }
+
+        .education-card h3 {
+            margin-bottom: 7px;
+            color: #18212f;
+        }
+
+        .education-card p {
+            color: #4b5563;
+        }
+
+        /* =========================
+           SERVICES
+        ========================= */
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .service-card {
+            background: rgba(255, 255, 255, 0.80);
+            border: 1px solid rgba(31, 41, 55, 0.14);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-color: #5b4fcf;
+        }
+
+        .service-card h3 {
+            margin-bottom: 12px;
+            color: #18212f;
+        }
+
+        .service-card p {
+            color: #4b5563;
+        }
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact-box {
+            max-width: 750px;
+            margin: auto;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.82);
+            border: 1px solid rgba(31, 41, 55, 0.14);
+            border-radius: 18px;
+            padding: 50px 30px;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+        }
+
+        .contact-box h2 {
+            color: #18212f;
+        }
+
+        .contact-box p {
+            color: #4b5563;
+            margin: 15px 0 25px;
+        }
+
+        .contact-info {
+            margin-bottom: 25px;
+            color: #374151;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            border-top: 1px solid rgba(31, 41, 55, 0.15);
+            color: #4b5563;
+            background: rgba(255, 255, 255, 0.82);
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 850px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .about {
+                grid-template-columns: 1fr;
+            }
+
+            .services {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 70px 5%;
+            }
+
+            .hero h1 {
+                font-size: 48px;
+            }
+
+            .hero h2 {
+                font-size: 19px;
+            }
+
+            .hero-content {
+                padding: 35px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVIGATION
+    ========================= -->
+
+    <nav>
+        <div class="nav-container">
+
+            <div class="logo">
+                Nitz<span>Portfolio</span>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+
+    <!-- =========================
+         HOME
+    ========================= -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <div class="badge">
+                Available for Remote Opportunities
+            </div>
+
+            <h1>
+                Hi, I'm <span>Nitz</span>
+            </h1>
+
+            <h2>
+                Video Editor | CapCut Professional
+                <br>
+                Data Entry Specialist | Data Entry Clerk / Data Encoder |
+                Administrative Assistant
+                <br>
+                Multimedia Producer | Virtual Assistant | Marketing Assistant | Social Media Assistant
+            </h2>
+
+            <p>
+                Creative and detail-oriented Video Editor specializing in
+                professional video editing using CapCut. Experienced in
+                creating engaging and polished video content through clean
+                cuts, transitions, text animation, subtitles, audio
+                synchronization, visual effects, and storytelling.
+            </p>
+
+            <div class="buttons">
+
+                <a
+                    href="https://drive.google.com/drive/folders/1leHadpxgJs38CZ47y1OBFR2o7tvJuoM6?usp=sharing"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn-primary">
+                    View My Portfolio
+                </a>
+
+                <a href="#contact" class="btn btn-secondary">
+                    Contact Me
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         ABOUT
+    ========================= -->
+
+    <section id="about">
+
+        <div class="container">
+
+            <div class="section-title">
+                <h2>About Me</h2>
+                <p>Professional background and information</p>
+            </div>
+
+            <div class="about">
+
+                <div class="about-text">
+
+                    <h3>Professional Summary</h3>
+
+                    <p>
+                        Creative and self-motivated professional with hands-on
+                        experience in multimedia content creation, video editing,
+                        content development, scriptwriting, and video direction.
+                    </p>
+
+                    <p>
+                        Experienced in independently handling projects from
+                        concept development and preparation to production,
+                        editing, and final output.
+                    </p>
+
+                    <p>
+                        Also experienced in typing, data entry, document
+                        formatting, Microsoft Office applications, computer
+                        operations, and maintaining accuracy and attention
+                        to detail.
+                    </p>
+
+                    <div class="skills">
+
+                        <div class="skill">Data Entry</div>
+                        <div class="skill">Typing</div>
+                        <div class="skill">Microsoft Word</div>
+                        <div class="skill">Microsoft Excel</div>
+                        <div class="skill">PowerPoint</div>
+                        <div class="skill">Publisher</div>
+                        <div class="skill">Computer Operations</div>
+                        <div class="skill">CapCut</div>
+                        <div class="skill">Video Editing</div>
+                        <div class="skill">Content Creation</div>
+
+                    </div>
+
+                </div>
+
+                <div class="info-box">
+
+                    <p>
+                        <strong>Name:</strong><br>
+                        Samuel Nitan D. Gonzales
+                    </p>
+
+                    <p>
+                        <strong>Location:</strong><br>
+                        Atimonan, Quezon, Philippines
+                    </p>
+
+                    <p>
+                        <strong>Phone:</strong><br>
+                        09608276224
+                    </p>
+
+                    <p>
+                        <strong>Email:</strong><br>
+                        nitz27zz@gmail.com
+                    </p>
+
+                    <p>
+                        <strong>Target Roles:</strong><br>
+                        Video Editor, CapCut Professional
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         EXPERIENCE
+    ========================= -->
+
+    <section id="experience">
+
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Work Experience</h2>
+                <p>Professional and hands-on experience</p>
+            </div>
+
+            <div class="experience">
+
+                <div class="experience-card">
+
+                    <h3>
+                        Video Editor / Content Creator / Multimedia Producer
+                    </h3>
+
+                    <div class="company">
+                        Independent / Freelance | 2025 – Present
+                    </div>
+
+                    <ul>
+
+                        <li>
+                            Create, edit, and produce video content from
+                            concept development to final output.
+                        </li>
+
+                        <li>
+                            Perform video editing using CapCut including
+                            cutting, transitions, effects, text animation,
+                            subtitles, audio synchronization, and color
+                            adjustments.
+                        </li>
+
+                        <li>
+                            Develop video concepts and visual storytelling
+                            approaches based on the intended audience.
+                        </li>
+
+                        <li>
+                            Write scripts, captions, and other content
+                            materials for video projects.
+                        </li>
+
+                        <li>
+                            Plan scenes, shots, sequences, and overall
+                            video flow.
+                        </li>
+
+                        <li>
+                            Independently manage planning, recording,
+                            editing, and publishing.
+                        </li>
+
+                        <li>
+                            Troubleshoot creative and technical issues
+                            during production.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="experience-card">
+
+                    <h3>
+                        Marketing Professional
+                    </h3>
+
+                    <div class="company">
+                        Nissan Otis | 2024
+                    </div>
+
+                    <ul>
+
+                        <li>
+                            Assisted in marketing-related activities
+                            and customer-oriented tasks.
+                        </li>
+
+                        <li>
+                            Developed communication and interpersonal
+                            skills through interaction with clients
+                            and team members.
+                        </li>
+
+                        <li>
+                            Supported promotional and marketing activities
+                            as assigned.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="experience-card">
+
+                    <h3>
+                        Computer / Office Skills and Digital Production
+                    </h3>
+
+                    <div class="company">
+                        Human Cafe | 2023 – 2024
+                    </div>
+
+                    <ul>
+
+                        <li>
+                            Performed typing, data entry, formatting,
+                            editing, and document preparation.
+                        </li>
+
+                        <li>
+                            Used Microsoft Word, Excel, PowerPoint,
+                            Publisher, and other computer applications.
+                        </li>
+
+                        <li>
+                            Worked with computer-based tools while
+                            maintaining accuracy and attention to detail.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SKILLS
+    ========================= -->
+
+    <section id="skills">
+
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Core Skills</h2>
+                <p>Technical, administrative, and creative skills.</p>
+            </div>
+
+            <div class="services">
+
+                <div class="service-card">
+
+                    <h3>📊 Data Entry & Office</h3>
+
+                    <p>
+                        Typing, data entry, document formatting,
+                        Microsoft Word, Excel, PowerPoint,
+                        Publisher, spreadsheets, tables,
+                        formulas, and data organization.
+                    </p>
+
+                </div>
+
+
+                <div class="service-card">
+
+                    <h3>🎬 Multimedia & Content</h3>
+
+                    <p>
+                        CapCut video editing, video cutting,
+                        transitions, text animation, subtitles,
+                        audio synchronization, color correction,
+                        storytelling, content planning, and scriptwriting.
+                    </p>
+
+                </div>
+
+
+                <div class="service-card">
+
+                    <h3>💻 Computer Skills</h3>
+
+                    <p>
+                        Computer operations, digital tools,
+                        creative problem solving, independent work,
+                        fast learning, attention to detail,
+                        and time management.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="skills">
+
+                <div class="skill">Microsoft Word</div>
+                <div class="skill">Microsoft Excel</div>
+                <div class="skill">Microsoft PowerPoint</div>
+                <div class="skill">Microsoft Publisher</div>
+                <div class="skill">Data Entry</div>
+                <div class="skill">Typing</div>
+                <div class="skill">Computer Operations</div>
+                <div class="skill">CapCut</div>
+                <div class="skill">Video Editing</div>
+                <div class="skill">Scriptwriting</div>
+                <div class="skill">Content Planning</div>
+                <div class="skill">Creative Problem Solving</div>
+                <div class="skill">Independent Work</div>
+                <div class="skill">Attention to Detail</div>
+                <div class="skill">Time Management</div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         EDUCATION
+    ========================= -->
+
+    <section id="education">
+
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Educational Background</h2>
+                <p>Academic background and training.</p>
+            </div>
+
+            <div class="education">
+
+                <div class="education-card">
+
+                    <h3>
+                        Bachelor of Science in Business Administration
+                    </h3>
+
+                    <p>
+                        Major in Marketing Management
+                    </p>
+
+                    <p>
+                        Leon Guinto Memorial College
+                    </p>
+
+                    <p>
+                        2019 – 2022 | Completed up to 3rd Year
+                    </p>
+
+                </div>
+
+
+                <div class="education-card">
+
+                    <h3>
+                        Senior High School – Information and Communication Technology (ICT)
+                    </h3>
+
+                    <p>
+                        Leon Guinto Memorial College, Inc.
+                    </p>
+
+                    <p>
+                        Atimonan, Quezon | 2012 – 2018
+                    </p>
+
+                </div>
+
+
+                <div class="education-card">
+
+                    <h3>
+                        Junior High School
+                    </h3>
+
+                    <p>
+                        Leon Guinto Memorial College, Inc.
+                    </p>
+
+                    <p>
+                        Atimonan, Quezon | 2012 – 2016
+                    </p>
+
+                </div>
+
+
+                <div class="education-card">
+
+                    <h3>
+                        Elementary
+                    </h3>
+
+                    <p>
+                        Atimonan Central School
+                    </p>
+
+                    <p>
+                        Completed: 2012
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT
+    ========================= -->
+
+    <section id="contact">
+
+        <div class="container">
+
+            <div class="contact-box">
+
+                <h2>
+                    Let's Work Together
+                </h2>
+
+                <p>
+                    Interested in working with me?
+                    Feel free to contact me for remote opportunities,
+                    freelance projects, or professional collaboration.
+                </p>
+
+                <div class="contact-info">
+
+                    <p>
+                        📧 nitz27zz@gmail.com
+                    </p>
+
+                    <p>
+                        📱 09608276224
+                    </p>
+
+                    <p>
+                        📍 Atimonan, Quezon, Philippines
+                    </p>
+
+                </div>
+
+                <div class="buttons">
+
+                    <a
+                        href="mailto:nitz27zz@gmail.com"
+                        class="btn btn-primary">
+                        Email Me
+                    </a>
+
+                    <a
+                        href="https://drive.google.com/drive/folders/1leHadpxgJs38CZ47y1OBFR2o7tvJuoM6?usp=sharing"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn btn-secondary">
+                        View Portfolio
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <p>
+            © 2026 Samuel Nitan D. Gonzales. All Rights Reserved.
+        </p>
+
+    </footer>
+
+</body>
+</html>
